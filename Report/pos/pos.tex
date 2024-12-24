@@ -1,0 +1,35 @@
+\subsection{Reminder: Consensus Mechanisms}
+
+Consensus mechanisms are the foundational aspect of a blockchain network, serving as the protocol through which the network nodes agree on the validity and order of transactions that are added to the blockchain. Such mechanisms are critical as they ensure all participants in the decentralized network have a consistent view of the ledger, preventing issues like double spending and ensuring the network operates smoothly without the need for a central authority.
+
+Traditionally, blockchain networks like Bitcoin used a consensus mechanism known as Proof of Work (PoW). PoW required participants, known as miners, to solve complex cryptographic puzzles. The first miner to solve the puzzle would gets the right to add a block of transactions to the blockchain and receives a reward in the form of the blockchain's native cryptocurrency. 
+
+\subsection{Proof of Stake (PoS)}
+Proof of Stake (PoS) \cite{kiayias2017ouroboros} is a consensus mechanism where the creation of new blocks is handled by validators who are chosen based on the number of coins they hold and are willing to "stake" as collateral, (i.e. "to lock up"). Validators lock up their stake in a special wallet to show their commitment to maintaining the network's integrity. This stake can be lost or slashed if they are found to be acting maliciously, such as validating fraudulent transactions or attempting to alter the network's protocol. The risk of losing their stake deters validators from committing such actions. This staking acts as both a security deposit and a sign of commitment to the network's integrity. The fundamental concept is that the more coins an actor stakes, the higher its chances of being chosen to validate transactions and create new blocks.
+
+The selection of validators in a PoS system typically involves several factors:
+\begin{itemize}
+    \item \textbf{Stake Size:} The primary factor is the amount of the cryptocurrency that a validator stakes. The larger their stake, the greater their chances of being chosen to validate a block. This is because a larger stake signifies a greater loss if they were to act maliciously, hence a higher degree of trustworthiness
+    %--
+    \item \textbf{Randomization:} Many PoS systems incorporate a degree of randomness in the selection process. This can be achieved through algorithms that use factors like the age of the staked coins and the node's wealth to ensure fairness and reduce the predictability of being chosen.
+    %--
+    \item \textbf{Coin Age: } Some variations of PoS consider the age of the coins staked, where older staked coins could increase a validator's chance of creating a block. This method, however, has fallen out of favor in many newer PoS protocols due to potential security issues.
+\end{itemize}
+
+Once chosen, validators are responsible for block validation (i.e. veryfying the validity of transactions,ensuring no double-spending or other fraudulent activities), block creation, and adding the block to the blockchain. Validators are rewarded for their work in the form of transaction fees or newly minted coins.\\
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/pos.png}
+    \caption{Proof of Stake (PoS) Consensus Mechanism, flowchart of the process.}
+    \label{fig:pos}
+\end{figure}
+
+\newpage
+\subsection{Main Differences Between PoW and PoS}
+
+\begin{itemize}
+    \item \textbf{Energy Efficiency:} PoS is far more energy-efficient than PoW since it does not require miners to solve complex mathematical problems using powerful and energy-intensive computer hardware.
+    \item \textbf{Reduced Risk of Centralization:} PoW can lead to centralization because individuals or companies with the financial resources to invest in advanced mining equipment can dominate the mining process. In contrast, PoS reduces this risk as the ability to create blocks isn't based on hardware but on the amount of cryptocurrency a validator is willing to stake.
+    \item \textbf{Security:} While PoW security is based on the amount of work done by miners, PoS security is based on the amount of stake validators are willing to risk. Some argue this makes PoS less secure, as it might be cheaper to acquire 51\% of the stake than to control 51\% of the mining power in PoW.
+\end{itemize}

@@ -1,0 +1,39 @@
+The Proof of Stake consensus mechanism all though presenting a more energy efficient and scalable alternative to Proof of Work, introduces a new set of security risks and challenges. Some being linked to the inherent nature of PoS, while others are specific to the implementation of PoS in Ethereum 2.0. The following will explore the main (i.e. most documented) security implications and risks associated with PoS:
+
+\subsection{The nothing-at-stake problem}
+The "nothing at stake" problem arises because validators in a PoS system do not incur significant costs to support multiple forks of the blockchain, unlike in PoW, where substantial computational resources are needed for mining each fork. This issue can occur during decision points where the blockchain may fork due to normal operations or malicious activities.
+
+\begin{quote}
+    \textit{"When a Proof of Stake blockchain forks[$\cdots$], the scarce resource for block production is not hash power but token stake, and, in a fork, an equivalent amount of stake is created on the new network. This means a Block Producer can start creating blocks on both networks immediately, and they do not have to choose (the computation cost of creating a block in a PoS system is generally trivial because miners are not competing with each other based on computation)."} - Smith \& Crown \cite{nas_quote}
+\end{quote}
+
+\begin{itemize}
+    \item \textbf{Consequences:} If validators decide to validate blocks on multiple chains, it can lead to security breaches such as double spending. This happens because validators might validate a transaction on one fork and then the same or conflicting transaction on another fork, leading to inconsistencies across the network.
+    %--
+    \item \textbf{Technical Explanation:} In PoW, committing resources to a fork is a risk as miners must choose which fork they believe will survive to recoup their computational investments. In PoS, since the cost is minimal, validators might be tempted to maximize their rewards by supporting several forks, reducing the reliability and security of the network.
+\end{itemize}
+
+\subsection{Long-range attacks}
+
+Long-range attacks involve attackers taking control of private keys for old stakes or finding ways to buy old keys that are no longer actively used but still have associated stakes. These attacks can potentially allow attackers to rewrite a blockchain's history from a point where they can create an alternative longest chain, challenging the network's legitimacy.
+
+\begin{itemize}
+    \item \textbf{Execution:} Attackers use these old keys to start building an alternative blockchain from a point back in time, proposing it as the real chain. If they can convince other nodes in the network to accept this rewritten history, it could replace the actual legitimate chain.
+    %--
+    \item \textbf{Implications:} Such attacks can lead to loss of trust in the blockchain's integrity and could devalue the associated cryptocurrency as transaction history may be reversed or altered.
+\end{itemize}
+
+\subsection{Bribe Attacks}
+
+Bribe attacks exploit the PoS mechanism by providing financial incentives to validators to act maliciously. This could include voting for particular transactions or forks, or creating blocks that include fraudulent transactions.
+
+\begin{itemize}
+    \item \textbf{Mechanism:} Attackers can directly offer validators rewards outside the system (off-chain payments), making it lucrative for validators to deviate from honest behavior. Since stakes are public, it is relatively straightforward for an attacker to target wealthy validators or those with significant control over the blockchain state.
+    %--
+    \item \textbf{Risks:} Bribe attacks risk centralizing power in the hands of wealthy validators or external entities who can afford to pay bribes, undermining the decentralized nature of the blockchain and potentially leading to fraudulent states being accepted as valid.
+\end{itemize}
+
+
+\subsection{Other Risks}
+
+The vulnerabilities and concerns posed by PoS are not limited to the above-mentioned risks. Other potential security implications include, Stake Centralization, where a small number of validators control a significant portion of the network, leading to centralization risks similar to PoW, Validator Collusion where validators conspire to manipulate the blockchain, etc\ldots in addition to Software specific risks such as bugs, vulnerabilities, and exploits in the PoS implementation.

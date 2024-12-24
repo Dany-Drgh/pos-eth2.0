@@ -1,0 +1,66 @@
+\documentclass[a4paper]{article}
+
+
+%% Define your personal info here %%%%%%%%%%%%%%%%%%%%%%% <--------------- X
+\newcommand\TPid{}
+\newcommand\TPname{Understanding Proof-of-Stake and its Security Implications through the Example of Ethereum 2.0}
+\newcommand\Firstname{Dany}
+\newcommand\Familyname{A. DARGHOUTH}
+\newcommand\Email{dany.al-moghrabi@etu.unige.ch}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{preambule}
+\addto\captionsenglish{\renewcommand*\contentsname{Summary}}
+\addbibresource{ref.bib}
+
+%%%%%%%% DOCUMENT %%%%%%%%
+\begin{document}
+% % % % %
+% % % %
+% % %
+% %
+%   
+
+\input{title}
+\tableofcontents
+
+\vfill
+\textit{The grammar, spelling and formatting of this report have been reviewed using AI tools such as Quillbot and Grammarly, explaining a possible high detection score when using AI detection tools.}
+
+\newpage
+%==============================================================================%
+\section{Introduction}
+\input{introduction/intro}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=%
+\subsection{Context}
+\input{introduction/context.tex}
+%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=%
+\subsection{Existing works}
+\input{introduction/existing_works.tex}
+%==============================================================================%
+\newpage
+\section{The Proof of Stake Consensus Mechanism}
+\input{pos/pos}
+%==============================================================================%
+\section{Proof of Stake in Ethereum 2.0}
+\input{pos/pos_eth}
+%==============================================================================%
+\section{Security Implications and risks of PoS}
+\input{sec/risks}
+%==============================================================================%
+\section{Mitigating Security Risks in PoS}
+\input{sec/mitigation}
+%==============================================================================%
+\newpage
+\section{Conclusion}
+\input{conclusion/conclusion}
+%==============================================================================%
+\newpage
+\printbibliography
+
+%
+% %
+% % %
+% % % %
+% % % % %
+\end{document}

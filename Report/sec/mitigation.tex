@@ -1,0 +1,25 @@
+Addressing the vulnerabilities inherent in Proof of Stake (PoS) systems requires a multifaceted approach, focusing on technological, community, and procedural enhancements to strengthen the network. 
+
+\textit{This section does not aim at giving a comprehensive list of all possible mitigation strategies, but rather to provide a few examples of how the risks associated with PoS can be addressed.}
+
+\subsection{Mitigating the Nothing-at-Stake Problem}
+
+The "nothing-at-stake" problem can be mitigated by introducing penalties for validators who show harmful behavior. Implementing slashing conditions where validators lose a portion of their stakes for behaviors that harm the consensus process, such as validating multiple conflicting blocks, can deter the "nothing at stake" issue. By penalizing validators who act maliciously or irresponsibly, the network can maintain security and integrity.
+
+An other approach to mitigate this issue is to use a checkpoint system, where validators are required to commit to a specific chain, reducing the likelihood of supporting multiple forks. This system can help prevent validators from exploiting the "nothing-at-stake" problem by forcing them to choose a single chain to validate, enhancing network security and consistency.
+
+\subsection{Addressing Long-Range Attacks}
+
+Mitigating long range-attacks can be achived by implementing mechanisms such as Key Evolving Cryptography (KEC), involving changing the private keys used for signing transactions over time, making it difficult for attackers to use old keys to rewrite the blockchain's history. By regularly updating private keys, the network can prevent long-range attacks and maintain the integrity of the blockchain.
+
+An other common approach to prevent long-range attacks would be to introduce a weak subjectivity mechanism, where nodes rely on trusted sources to determine the correct blockchain history. By establishing trusted checkpoints or validators, the network can prevent attackers from rewriting history beyond a certain point, ensuring the security and reliability of the blockchain. This approach however introduces a level of centralization and reliance on external sources, which may conflict with the decentralized nature of blockchain technology.
+
+\subsection{Protecting Against Bribe Attacks}
+
+Bribe attacks can be mitigated by enhancing the transparency and accountability of validators, making it more difficult for attackers to bribe them without detection. By implementing mechanisms to monitor validator behavior and detect suspicious activities, the network can identify and penalize validators who engage in malicious behavior, reducing the risk of bribe attacks.
+
+Decentralizing staking pools and validator selection processes can also help prevent bribe attacks by distributing power and influence across a broader set of participants. By reducing the concentration of stakes and control in the hands of a few validators, the network can enhance security and resilience against external manipulation and bribery.
+
+\subsection {Mitigating other Risks}
+
+Other concerns such as stake centralization, validator collusion, and software-specific risks can be addressed through a combination of technical enhancements, community engagement, and procedural changes. Implementing mechanisms to prevent stake centralization, such as capping the maximum stake a validator can hold, can help distribute power more evenly across the network, reducing the risk of centralization.

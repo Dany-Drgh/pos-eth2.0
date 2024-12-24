@@ -1,0 +1,36 @@
+\subsection{The Beacon Chain}
+
+The Beacon Chain, introduced as the initial phase of Ethereum 2.0, is foundational to Ethereum's shift towards a fully PoS-based system. It operates independently of the Ethereum mainnet (which continues to use PoW during the transition) and is responsible for managing the PoS protocol. Key features include:
+
+\begin{itemize}
+    \item \textbf{Validator Management:} The Beacon Chain manages a registry of validators and their stakes. Validators are required to stake 32 ETH, a substantial commitment meant to deter malicious behavior.
+    %--
+    \item \textbf{Random Selection for Block Proposal:} The Beacon Chain uses a sophisticated randomness mechanism called the "Randomness Beacon" to select validators for proposing new blocks. This process helps ensure security and fairness in block creation.
+    %--
+    \item \textbf{Epochs and Committees:} Time on the Beacon Chain is divided into epochs, which consist of multiple slots (time periods when new blocks can be created). During each epoch, committees of validators are assigned to vote on proposed blocks, adding an additional layer of consensus and security.
+\end{itemize}
+
+\subsection{Shard Chains}
+
+Shard chains are an upcoming feature in Ethereum 2.0, designed to enhance the network's scalability by distributing the data processing load across multiple new chains. Each shard chain processes its own set of transactions and interactions, but remains connected to the main chain through the Beacon Chain.
+
+Key features of shard chains include:
+\begin{itemize}
+    \item \textbf{Increased Throughput:} By dividing the network into multiple shards, Ethereum can process many transactions in parallel, significantly increasing the network's capacity.
+    %--
+    \item \textbf{Crosslinks:} Shard chains will periodically submit summaries of their state to the Beacon Chain, known as "crosslinks". These crosslinks serve as checkpoints that link shard states back to the main Ethereum blockchain, ensuring all parts of the network remain synchronized.
+\end{itemize}
+
+\subsection{From PoW to PoS}
+
+The transition of Ethereum from Proof of Work (PoW) to Proof of Stake (PoS), as part of the Ethereum 2.0 upgrade, is a complex and multi-phased integration over several stages :
+
+\begin{enumerate}
+    \item \textbf{Beacon Chain Launch}
+    %--
+    \item \textbf{Shard Chains implementations}
+    %--
+    \item \textbf{Docking the Mainnet to Beacon Chain:} This critical phase will see the existing Ethereum mainnet, still running on PoW, being "docked" or merged with the PoS Beacon Chain. This merger is colloquially known as "The Merge" and represents the point where the current Ethereum mainnet transitions fully to a PoS system. At this stage, PoW will be completely phased out, and the Beacon Chain will become the primary consensus mechanism for all network activities, including transaction processing and smart contracts.
+    %--
+    \item \textbf{Fully Functional Shards:}The final stage of the transition involves enabling shard chains to handle transactions and smart contracts. This will allow the network to fully utilize the scalability improvements introduced by sharding.
+\end{enumerate} 
